@@ -1,0 +1,33 @@
+/* CSS POUR LE SHORTCODE .bloc-lien-image */
+.banniere-bloc-lien-image {
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+}
+.banniere-bloc-lien-image:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.5;
+}
+.banniere-bloc-lien-image .titre {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+}
