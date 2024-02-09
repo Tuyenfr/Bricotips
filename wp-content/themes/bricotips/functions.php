@@ -116,12 +116,14 @@ add_filter('get_the_archive_title', function($title) {
     return $title;
 });
 
+
 function the_category_filter($categories)
 {
     return str_replace("Outils", "Tous les outils", $categories);
 }
 
 add_filter('the_category', 'the_category_filter');
+
 
 function the_content_filter($content)
 {
@@ -133,6 +135,7 @@ function the_content_filter($content)
 
 add_filter('the_content', 'the_content_filter');
 
+
 function the_excerpt_filter($content)
 {
     if (is_archive()) {
@@ -142,6 +145,7 @@ function the_excerpt_filter($content)
 }
 
 add_filter('the_excerpt', 'the_excerpt_filter');
+
 
 function loop_end_action()
 {
@@ -158,6 +162,7 @@ function loop_end_action()
 
 add_action('loop_end', 'loop_end_action');
 
+
 $shown = false;
 
 function bricotips_intro_section_action()
@@ -173,6 +178,7 @@ function bricotips_intro_section_action()
 
 add_action('bricotips_intro_section', 'bricotips_intro_section_action');
 
+
 function paginate_links_filter($r)
 {
     return  "Pages: ".$r;
@@ -180,3 +186,12 @@ function paginate_links_filter($r)
 
 add_filter('paginate_links_output', 'paginate_links_filter');
 
+
+/* METTRE LE SITE EN MAINTENANCE */
+
+function maintenance_mode() {
+    if ( !current_user_can( 'administrator' ) ) {
+        wp_die('Maintenance.');
+    }
+}
+add_action('get_header', 'maintenance_mode');

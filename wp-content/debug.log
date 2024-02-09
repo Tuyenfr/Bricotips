@@ -1,0 +1,2 @@
+[09-Feb-2024 08:51:37 UTC] PHP Warning:  Undefined property: Bricotips_Top_Contact_Public::$emai in C:\xampp\htdocs\Bricotips\wp-content\plugins\bricotips-top-contact\public\class-bricotips-top-contact-public.php on line 111
+[09-Feb-2024 09:56:12 UTC] PHP Deprecated:  rtrim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\Bricotips\wp-includes\formatting.php on line 2831

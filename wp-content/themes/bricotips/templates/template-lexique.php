@@ -57,6 +57,7 @@ get_header();
     </section>
 
 </main><!-- #site-content -->
+
 <script>
     const mots = document.querySelectorAll("#lexique .mot");
     mots.forEach(mot => {
